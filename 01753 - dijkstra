@@ -20,11 +20,11 @@ void mindist()
         for(int i=0;i<v[cur.second].size();i++)
         {
             pii next=v[cur.second][i];
-            ll curdist=cur.first+next.second
-            if(dist[next.first]>curdist)
+            ll curdist=cur.first+next.first;
+            if(dist[next.second]>curdist)
             {
-                dist[next.first]=curdist;
-                pq.push({curdist,next.first});
+                dist[next.second]=curdist;
+                pq.push({curdist,next.second});
             }
         }
     }
@@ -39,7 +39,7 @@ int main()
     for(int v1,v2,e,i=0;i<E;i++)
     {
         cin>>v1>>v2>>e;
-        v[v1].push_back({v2,e});
+        v[v1].push_back({e,v2});
     }
     mindist();
     
