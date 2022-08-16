@@ -3,7 +3,7 @@ using namespace std;
 typedef pair<int,int> pii;
 typedef long long ll;
 
-ll dist[20001],V,E,st,INF=1e9+7;
+ll dist[20001],V,E,st,INF=1e9;
 vector<pii> v[20001];
 
 void mindist()
@@ -17,7 +17,7 @@ void mindist()
         pii cur=pq.top();
         pq.pop();
 
-        if(d[cur.second]<pq.top().first) continue;
+        if(dist[cur.second]<cur.first) continue;
         
         for(int i=0;i<v[cur.second].size();i++)
         {
