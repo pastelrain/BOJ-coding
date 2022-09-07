@@ -33,12 +33,12 @@ def check_prime(k):
         else:
             return False
     else:
-        for i in [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]:
+        for i in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]:
             if mr(k,i) == False:
                 break
             else:
                 check += 1
-        if check == 12:
+        if check == 20:
             return True
         else:
             return False
