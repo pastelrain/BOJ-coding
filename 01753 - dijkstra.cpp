@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-typedef pair<int,int> pii;
-typedef long long ll;
+
+#define ll long long
+#define pii pair<int,int>
 
 ll dist[20001],V,E,st,INF=1e9;
 vector<pii> v[20001];
